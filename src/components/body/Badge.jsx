@@ -9,12 +9,20 @@ const badgeTypes = [
     },
     {
         displayText: "Sneak Peek",
-        className: "badge-sneak-peek"
+        className: "badge-sneak-peek",
+    },
+    {
+        displayText: "Announcement",
+        className: 'badge-announcement'
+    },
+    {
+        displayText: "News",
+        className: 'badge-news'
     }
-]
+];
 
 function Badge(props) {
-    const badge = badgeTypes[props.type]
+    const badge = badgeTypes[props.type];
     return <p className={`badge ${badge.className}`}>{badge.displayText}</p>;
 }
 

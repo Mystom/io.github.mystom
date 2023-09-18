@@ -10,7 +10,11 @@ function ToggleMenu() {
                 color="white"
                 onToggle={(isToggled) => {
                     const navItem = document.getElementById("navigation").style;
+                    const body = document.body.classList;
+
                     navItem.transform = `translateX(${isToggled ? 0 : 100}%)`;
+                    if (isToggled) body.add('noscroll');
+                    else body.remove('noscroll');
                 }}
             />
         </div>
